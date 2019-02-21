@@ -1,0 +1,13 @@
+.app-iframe {
+  width: 100%;
+  height: calc(100% - 50px);
+  border-style: none;
+  display: none;
+}
+
+.app-iframe.loaded {
+  display: block;
+  -webkit-animation: app-content-loaded 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: app-content-loaded 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+}
+/*# sourceMappingURL=app.css.map */

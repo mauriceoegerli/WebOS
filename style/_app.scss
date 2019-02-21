@@ -1,0 +1,120 @@
+.app{
+    display: block;
+    background: $system-primary-color;
+    width: 100%;
+    height: calc(100% - #{$status-bar-height});
+    margin: $status-bar-height 0 0 0;
+    opacity: 0;
+    overflow: hidden;
+
+    .view{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        padding: $app-header-height 0 0 0;
+
+        &.visible{
+            display: flex;
+        }
+
+        .view-header{
+            height: $app-header-height;
+            width: 100%;
+            background-color: $system-secondary-background-color;
+            color: $system-font-color;
+            box-shadow: $default-box-shadow;
+            position: absolute;
+            top: 0;
+            z-index: 15;
+    
+            .view-header-label{
+                display: flex; 
+                height: 100%;
+                font-size: 1.3em;
+    
+                p{
+                    margin: auto;
+                }
+            }
+        }
+
+        .section{
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0 0 0;
+
+            .section-entry{
+                display: flex;
+                flex-direction: row;
+                color: $system-font-color;
+                padding: 20px 0 20px 20px;
+                border-bottom: solid 2px $system-primary-color;
+
+                .entry-icon{
+                    width: 40px;
+                    font-size: 1.4em;
+                    display: flex;
+                }
+
+                &:active{
+                    background: $system-secondary-background-color;
+                }
+            }
+        }
+    }
+
+    .sub-view{
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        background-color: $system-primary-color;
+
+        .view-header{
+            box-shadow: none;
+        }
+
+        &.opened{
+            display: flex;
+            animation: sub-view-in $view-open-animation-properties;
+        }
+
+        &.closing{
+            animation: sub-view-out $view-open-animation-properties;
+        }
+    }
+
+    &.opened{
+        position: absolute;
+        display: block;
+        animation: app-open $app-open-animation-properties;
+        animation-fill-mode: forwards;
+        z-index: 14;
+    }
+
+    &.closing{
+        position: absolute;
+        display: block;
+        animation: app-close $app-open-animation-properties;
+        animation-fill-mode: forwards;
+        z-index: 14;
+    }
+
+    &.history{
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        z-index: 91;
+        opacity: 1;
+    }
+
+    &.history-open{
+        animation: history-app-open $app-open-animation-properties;
+        animation-fill-mode: forwards;
+    }
+}

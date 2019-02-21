@@ -1,0 +1,37 @@
+
+$default-transition-properties: 100ms cubic-bezier(.51,.01,.46,.96);
+
+$main-font: 'Open Sans', sans-serif, Helvetica;
+
+$status-bar-height: 25px;
+
+$home-app-label-color: #e6e6e6;
+$home-app-width: 60px;
+$home-app-height: 60px;
+
+$app-icon-shadow: 0 0 5px black;
+$app-header-height: 50px;
+$app-open-animation-properties: 400ms cubic-bezier(.43,.21,.38,.96);
+$app-icon-animation-properties: 200ms cubic-bezier(.43,.21,.38,.96);
+$app-history-entry-height: 400px;
+$app-history-box-shadow: 0 0 20px #000;
+
+$view-open-animation-properties: 300ms cubic-bezier(.43,.21,.38,.96);
+$default-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+$outline-shadow-thin: 0 0 0 1px;
+$outline-shadow-regular: 0 0 0 2px;
+$outline-shadow-bold: 0 0 0 4px;
+
+$nav-bar-height: 50px;
+$nav-bar-color: #0000008c;
+$nav-icons-color: #e6e6e6;
+
+$wallpaper-thumbnail-width: 80px;
+
+$lockscreen-animation-properties: 800ms cubic-bezier(.45,0,0,1);
+
+$loading-background: #1e1e1e;
+$loading-circle: #fff;
+$loading-animation-properties: 5s ease-in-out infinite;
+$loading-animation-escape-properties: 1s cubic-bezier(.45,0,0,1);

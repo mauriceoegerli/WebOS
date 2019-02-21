@@ -1,0 +1,13 @@
+@import '../style/variables';
+
+.app-iframe{
+    width: 100%;
+    height: calc(100% - #{$nav-bar-height});
+    border-style: none;
+    display: none;
+
+    &.loaded{
+        display: block;
+        animation: app-content-loaded $app-open-animation-properties;
+    }
+}

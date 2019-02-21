@@ -1,0 +1,2046 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+html {
+  height: 100%;
+  width: 100%;
+}
+
+html.dark-theme {
+}
+
+@-webkit-keyframes app-open {
+  0% {
+    -webkit-transform: scale3d(0.1, 0.1, 1) translate3d(50%, 50%, 0);
+            transform: scale3d(0.1, 0.1, 1) translate3d(50%, 50%, 0);
+  }
+  100% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes app-open {
+  0% {
+    -webkit-transform: scale3d(0.1, 0.1, 1) translate3d(50%, 50%, 0);
+            transform: scale3d(0.1, 0.1, 1) translate3d(50%, 50%, 0);
+  }
+  100% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes app-close {
+  0% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+  60% {
+    -webkit-transform: scale3d(0.2, 0.2, 1) translate3d(30%, 30%, 0);
+            transform: scale3d(0.2, 0.2, 1) translate3d(30%, 30%, 0);
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale3d(0.2, 0.2, 1) translate3d(30%, 30%, 0);
+            transform: scale3d(0.2, 0.2, 1) translate3d(30%, 30%, 0);
+  }
+}
+
+@keyframes app-close {
+  0% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+  60% {
+    -webkit-transform: scale3d(0.2, 0.2, 1) translate3d(30%, 30%, 0);
+            transform: scale3d(0.2, 0.2, 1) translate3d(30%, 30%, 0);
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale3d(0.2, 0.2, 1) translate3d(30%, 30%, 0);
+            transform: scale3d(0.2, 0.2, 1) translate3d(30%, 30%, 0);
+  }
+}
+
+@-webkit-keyframes history-app-open {
+  0% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+  100% {
+  }
+}
+
+@keyframes history-app-open {
+  0% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+  100% {
+  }
+}
+
+@-webkit-keyframes app-icon-open {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes app-icon-open {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes app-icon-close {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes app-icon-close {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sub-view-in {
+  0% {
+    -webkit-transform: translate3d(40px, 0, 0);
+            transform: translate3d(40px, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes sub-view-in {
+  0% {
+    -webkit-transform: translate3d(40px, 0, 0);
+            transform: translate3d(40px, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sub-view-out {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate3d(40px, 0, 0);
+            transform: translate3d(40px, 0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes sub-view-out {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate3d(40px, 0, 0);
+            transform: translate3d(40px, 0, 0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes background-cover {
+  0% {
+    background-color: transparent;
+  }
+  40% {
+    background-color: #000;
+  }
+  60% {
+    background-color: #000;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes background-cover {
+  0% {
+    background-color: transparent;
+  }
+  40% {
+    background-color: #000;
+  }
+  60% {
+    background-color: #000;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@-webkit-keyframes history-open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes history-open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes history-close {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes history-close {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes app-content-loaded {
+  0% {
+    -webkit-transform: translate3d(0, 30px, 0);
+            transform: translate3d(0, 30px, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes app-content-loaded {
+  0% {
+    -webkit-transform: translate3d(0, 30px, 0);
+            transform: translate3d(0, 30px, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes lock-screen-in {
+  0% {
+    z-index: 1000;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  100% {
+    z-index: 1000;
+    -webkit-box-shadow: inset 0 -120vh 30px #000;
+            box-shadow: inset 0 -120vh 30px #000;
+  }
+}
+
+@keyframes lock-screen-in {
+  0% {
+    z-index: 1000;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  100% {
+    z-index: 1000;
+    -webkit-box-shadow: inset 0 -120vh 30px #000;
+            box-shadow: inset 0 -120vh 30px #000;
+  }
+}
+
+@-webkit-keyframes lock-screen-out {
+  0% {
+    z-index: 1000;
+    -webkit-box-shadow: inset 0 -120vh 30px #000;
+            box-shadow: inset 0 -120vh 30px #000;
+  }
+  100% {
+    z-index: 1000;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+@keyframes lock-screen-out {
+  0% {
+    z-index: 1000;
+    -webkit-box-shadow: inset 0 -120vh 30px #000;
+            box-shadow: inset 0 -120vh 30px #000;
+  }
+  100% {
+    z-index: 1000;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+html.dark-theme .app {
+  display: block;
+  background: #1e1e1e;
+  width: 100%;
+  height: calc(100% - 25px);
+  margin: 25px 0 0 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+html.dark-theme .app .view {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  padding: 50px 0 0 0;
+}
+
+html.dark-theme .app .view.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html.dark-theme .app .view .view-header {
+  height: 50px;
+  width: 100%;
+  background-color: #292929;
+  color: #e6e6e6;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  position: absolute;
+  top: 0;
+  z-index: 15;
+}
+
+html.dark-theme .app .view .view-header .view-header-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  font-size: 1.3em;
+}
+
+html.dark-theme .app .view .view-header .view-header-label p {
+  margin: auto;
+}
+
+html.dark-theme .app .view .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 0 0 0;
+}
+
+html.dark-theme .app .view .section .section-entry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #e6e6e6;
+  padding: 20px 0 20px 20px;
+  border-bottom: solid 2px #1e1e1e;
+}
+
+html.dark-theme .app .view .section .section-entry .entry-icon {
+  width: 40px;
+  font-size: 1.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html.dark-theme .app .view .section .section-entry:active {
+  background: #292929;
+}
+
+html.dark-theme .app .sub-view {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  background-color: #1e1e1e;
+}
+
+html.dark-theme .app .sub-view .view-header {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+html.dark-theme .app .sub-view.opened {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: sub-view-in 300ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: sub-view-in 300ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+}
+
+html.dark-theme .app .sub-view.closing {
+  -webkit-animation: sub-view-out 300ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: sub-view-out 300ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+}
+
+html.dark-theme .app.opened {
+  position: absolute;
+  display: block;
+  -webkit-animation: app-open 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: app-open 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 14;
+}
+
+html.dark-theme .app.closing {
+  position: absolute;
+  display: block;
+  -webkit-animation: app-close 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: app-close 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 14;
+}
+
+html.dark-theme .app.history {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  z-index: 91;
+  opacity: 1;
+}
+
+html.dark-theme .app.history-open {
+  -webkit-animation: history-app-open 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: history-app-open 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+html.dark-theme .load-animation-page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #1e1e1e;
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+html.dark-theme .load-animation-page .load-animation-container {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  position: absolute;
+  top: 20%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-animation: box-rotation-animation 5s ease-in-out infinite;
+          animation: box-rotation-animation 5s ease-in-out infinite;
+}
+
+html.dark-theme .load-animation-page .load-animation-container .load-animation-circle {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  background-color: #1e1e1e;
+}
+
+html.dark-theme .load-animation-page .load-animation-container .load-animation-box {
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: load-box-animation 5s ease-in-out infinite;
+          animation: load-box-animation 5s ease-in-out infinite;
+}
+
+html.dark-theme .load-animation-page .load-animation-text {
+  position: absolute;
+  top: 50%;
+  margin: 100px auto 0 auto;
+  color: #fff;
+  width: 60%;
+  overflow: hidden;
+}
+
+html.dark-theme .load-animation-page .load-animation-text-overlay {
+  position: absolute;
+  height: 20%;
+  top: 80%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00000000), to(#1e1e1e));
+  background: linear-gradient(#00000000, #1e1e1e);
+}
+
+html.dark-theme .load-animation-page .load-animation-bar {
+  width: 60%;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  margin: 50px auto 0 auto;
+}
+
+html.dark-theme .load-animation-page .load-animation-bar .load-animation-bar-filler {
+  width: 100%;
+  height: 100%;
+}
+
+html.dark-theme .load-animation-page .load-animation-bar .load-animation-bar-filler #load-animation-filler {
+  font-size: 0.8em;
+  background-color: #fff;
+  width: 0%;
+  height: 100%;
+  -webkit-transition: all 100ms ease-out;
+  transition: all 100ms ease-out;
+  font-weight: 400;
+}
+
+html.dark-theme .load-animation-page .load-animation-bar .load-animation-bar-filler #load-animation-filler p {
+  float: right;
+}
+
+html.dark-theme .load-animation-page.loaded {
+  -webkit-transition: all 1s cubic-bezier(0.45, 0, 0, 1);
+  transition: all 1s cubic-bezier(0.45, 0, 0, 1);
+  top: -100%;
+}
+
+@-webkit-keyframes load-box-animation {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+            transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+  12.5% {
+    -webkit-transform: translate3d(-25px, 0, 0) scale3d(2, 1, 1);
+            transform: translate3d(-25px, 0, 0) scale3d(2, 1, 1);
+  }
+  25% {
+    -webkit-transform: translate3d(-50px, 0, 0) scale3d(1, 1, 1);
+            transform: translate3d(-50px, 0, 0) scale3d(1, 1, 1);
+  }
+  37.5% {
+    -webkit-transform: translate3d(-50px, -25px, 0) scale3d(1, 2, 1);
+            transform: translate3d(-50px, -25px, 0) scale3d(1, 2, 1);
+  }
+  50% {
+    -webkit-transform: translate3d(-50px, -50px, 0) scale3d(1, 1, 1);
+            transform: translate3d(-50px, -50px, 0) scale3d(1, 1, 1);
+  }
+  62.5% {
+    -webkit-transform: translate3d(-25px, -50px, 0) scale3d(2, 1, 1);
+            transform: translate3d(-25px, -50px, 0) scale3d(2, 1, 1);
+  }
+  75% {
+    -webkit-transform: translate3d(0, -50px, 0) scale3d(1, 1, 1);
+            transform: translate3d(0, -50px, 0) scale3d(1, 1, 1);
+  }
+  87.5% {
+    -webkit-transform: translate3d(0, -25px, 0) scale3d(1, 2, 1);
+            transform: translate3d(0, -25px, 0) scale3d(1, 2, 1);
+  }
+  100% {
+  }
+}
+
+@keyframes load-box-animation {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+            transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+  12.5% {
+    -webkit-transform: translate3d(-25px, 0, 0) scale3d(2, 1, 1);
+            transform: translate3d(-25px, 0, 0) scale3d(2, 1, 1);
+  }
+  25% {
+    -webkit-transform: translate3d(-50px, 0, 0) scale3d(1, 1, 1);
+            transform: translate3d(-50px, 0, 0) scale3d(1, 1, 1);
+  }
+  37.5% {
+    -webkit-transform: translate3d(-50px, -25px, 0) scale3d(1, 2, 1);
+            transform: translate3d(-50px, -25px, 0) scale3d(1, 2, 1);
+  }
+  50% {
+    -webkit-transform: translate3d(-50px, -50px, 0) scale3d(1, 1, 1);
+            transform: translate3d(-50px, -50px, 0) scale3d(1, 1, 1);
+  }
+  62.5% {
+    -webkit-transform: translate3d(-25px, -50px, 0) scale3d(2, 1, 1);
+            transform: translate3d(-25px, -50px, 0) scale3d(2, 1, 1);
+  }
+  75% {
+    -webkit-transform: translate3d(0, -50px, 0) scale3d(1, 1, 1);
+            transform: translate3d(0, -50px, 0) scale3d(1, 1, 1);
+  }
+  87.5% {
+    -webkit-transform: translate3d(0, -25px, 0) scale3d(1, 2, 1);
+            transform: translate3d(0, -25px, 0) scale3d(1, 2, 1);
+  }
+  100% {
+  }
+}
+
+@-webkit-keyframes box-rotation-animation {
+  0% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes box-rotation-animation {
+  0% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+html.dark-theme #app-history-container {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b7;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  top: 25px;
+  left: 0;
+  z-index: 90;
+  padding: 40px 0 0 0;
+  overflow: scroll;
+}
+
+html.dark-theme #app-history-container .app-history {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 200px 10% 300px 10%;
+}
+
+html.dark-theme #app-history-container .app-history .app-history-entry-container {
+  height: calc(400px / 2);
+  width: 100%;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+html.dark-theme #app-history-container .app-history .app-history-entry-container .app-history-entry {
+  height: 400px;
+  width: 100%;
+  margin: 2px 0;
+  -webkit-box-shadow: 0 0 20px #000;
+          box-shadow: 0 0 20px #000;
+  position: relative;
+  -webkit-transform: perspective(100em) rotateX(-10deg);
+          transform: perspective(100em) rotateX(-10deg);
+}
+
+html.dark-theme #app-history-container .app-history .app-history-entry-container .app-history-entry .app-history-title {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1e1e1e;
+  z-index: 94;
+  color: #e6e6e6;
+}
+
+html.dark-theme #app-history-container .app-history .app-history-entry-container .app-history-entry .history-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 92;
+}
+
+html.dark-theme #app-history-container.open {
+  -webkit-animation: history-open 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: history-open 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  display: block;
+}
+
+html.dark-theme #app-history-container.close {
+  -webkit-animation: history-close 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: history-close 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+}
+
+html.dark-theme html, html.dark-theme body, html.dark-theme div, html.dark-theme span, html.dark-theme applet, html.dark-theme object, html.dark-theme iframe, html.dark-theme h1, html.dark-theme h2, html.dark-theme h3, html.dark-theme h4, html.dark-theme h5, html.dark-theme h6, html.dark-theme p, html.dark-theme blockquote, html.dark-theme pre, html.dark-theme a, html.dark-theme abbr, html.dark-theme acronym, html.dark-theme address, html.dark-theme big, html.dark-theme cite, html.dark-theme code, html.dark-theme del, html.dark-theme dfn, html.dark-theme em, html.dark-theme font, html.dark-theme img, html.dark-theme ins, html.dark-theme kbd, html.dark-theme q, html.dark-theme s, html.dark-theme samp, html.dark-theme small, html.dark-theme strike, html.dark-theme strong, html.dark-theme sub, html.dark-theme sup, html.dark-theme tt, html.dark-theme var, html.dark-theme b, html.dark-theme u, html.dark-theme center, html.dark-theme dl, html.dark-theme dt, html.dark-theme dd, html.dark-theme ol, html.dark-theme ul, html.dark-theme li, html.dark-theme fieldset, html.dark-theme form, html.dark-theme label, html.dark-theme legend, html.dark-theme caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: "Open Sans", sans-serif, Helvetica;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+}
+
+html.dark-theme body, html.dark-theme #window, html.dark-theme #main {
+  height: 100%;
+  width: 100%;
+}
+
+html.dark-theme #window {
+  background: #000;
+}
+
+html.dark-theme #window #main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html.dark-theme #window #main #status-bar {
+  height: 25px;
+  background-color: #000;
+  color: #e6e6e6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 100;
+}
+
+html.dark-theme #window #main #status-bar .clock-digital {
+  text-align: center;
+  padding: 1px 5px 0 0;
+}
+
+html.dark-theme #window #main #main-content-container {
+  height: 100%;
+  margin-top: 25px;
+  z-index: 10;
+}
+
+html.dark-theme #window #main #main-content-container #home-screen {
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+html.dark-theme #window #main #main-content-container #home-screen .app-grid {
+  width: 200%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px !important;
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
+  -ms-grid-rows: auto auto auto auto auto;
+      grid-template-rows: auto auto auto auto auto;
+}
+
+html.dark-theme #window #main #main-content-container #home-screen .app-grid .app-entry {
+  color: #e6e6e6;
+  height: 60px;
+  overflow: visible;
+}
+
+html.dark-theme #window #main #main-content-container #home-screen .app-grid .app-entry .app-icon {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+html.dark-theme #window #main #main-content-container #home-screen .app-grid .app-entry .app-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+html.dark-theme #window #main #main-content-container #home-screen .app-grid .app-entry .app-label {
+  text-align: center;
+  font-size: .9em;
+}
+
+html.dark-theme #window #main #main-content-container #home-screen .app-grid .app-entry .app-label p {
+  text-shadow: 0 0 5px black;
+}
+
+html.dark-theme #window #main #main-content-container #home-screen .app-grid .app-entry.opening {
+  -webkit-animation: app-icon-open 200ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: app-icon-open 200ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+html.dark-theme #window #main #main-content-container #home-screen .app-grid .app-entry.closing {
+  -webkit-animation: app-icon-close 200ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: app-icon-close 200ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+html.dark-theme #window #main #main-content-container #home-screen .app-grid-container {
+  -webkit-transition: -webkit-transform 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  transition: -webkit-transform 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  transition: transform 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  transition: transform 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96), -webkit-transform 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+}
+
+html.dark-theme #window #main #main-content-container #home-screen .app-grid-container.appOpen {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+html.dark-theme #window #main #nav-bar {
+  height: 50px;
+  background-color: #0000008c;
+  color: #e6e6e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+html.dark-theme #window #main #nav-bar .nav-item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+html.dark-theme #window #main #nav-bar .nav-item:active i {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+html.dark-theme #window #main #nav-bar .nav-item i {
+  -webkit-transition: all 100ms cubic-bezier(0.51, 0.01, 0.46, 0.96);
+  transition: all 100ms cubic-bezier(0.51, 0.01, 0.46, 0.96);
+  margin: auto;
+  font-size: 1.1em;
+}
+
+html.dark-theme #window #main #nav-bar .nav-item i#nav-back {
+  font-size: 1.9em;
+}
+
+html.dark-theme #app-container #settings-app #wallpaper-view .settings-wallpaper {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+html.dark-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-container {
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: local;
+}
+
+html.dark-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-container .wallpaper-transition-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+html.dark-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-container.wallpaper-transition .wallpaper-transition-cover {
+  -webkit-animation: background-cover 1s ease-in-out;
+          animation: background-cover 1s ease-in-out;
+}
+
+html.dark-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  z-index: 14;
+}
+
+html.dark-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid .wallpaper-selector-spacer {
+  height: calc(100% - 80px * 3);
+  width: 100%;
+  background: transparent;
+}
+
+html.dark-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid .wallpaper-selector-icon-up {
+  height: 20px;
+  width: 100%;
+}
+
+html.dark-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid .wallpaper-selector-images {
+  height: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #0000008e;
+  padding: 20px 10px 100% 10px;
+}
+
+html.dark-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid .wallpaper-selector-images .wallpaper-selector-image {
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 100ms cubic-bezier(0.51, 0.01, 0.46, 0.96);
+  transition: all 100ms cubic-bezier(0.51, 0.01, 0.46, 0.96);
+}
+
+html.dark-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid .wallpaper-selector-images .wallpaper-selector-image.selected {
+  border: solid 2px #e6e6e6;
+}
+
+html.dark-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid .wallpaper-selector-images .wallpaper-selector-upload {
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: all 100ms cubic-bezier(0.51, 0.01, 0.46, 0.96);
+  transition: all 100ms cubic-bezier(0.51, 0.01, 0.46, 0.96);
+}
+
+html.dark-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid .wallpaper-selector-images .wallpaper-selector-upload #wallpaper-uploader {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+}
+
+html.dark-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid .wallpaper-selector-images .wallpaper-selector-upload i {
+  margin: auto;
+  font-size: 1.2em;
+}
+
+html.dark-theme #app-container #settings-app #about-view .settings-about {
+  color: #e6e6e6;
+  display: block;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 80%;
+}
+
+html.dark-theme #app-container #settings-app #about-view .settings-about h1 {
+  font-size: 2em;
+  margin: 10px 0 10px 10px;
+}
+
+html.dark-theme #app-container #settings-app #about-view .settings-about h2 {
+  font-size: 1.5em;
+  margin: 10px 0 10px 10px;
+}
+
+html.dark-theme #app-container #settings-app #about-view .settings-about p {
+  margin: 10px 0 10px 10px;
+}
+
+html.dark-theme #app-container #settings-app #about-view .settings-about .secret {
+  margin-top: 1000px;
+}
+
+html.dark-theme .lockscreen-cover {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+html.dark-theme .lockscreen-cover.locked {
+  -webkit-animation: lock-screen-in 800ms cubic-bezier(0.45, 0, 0, 1);
+          animation: lock-screen-in 800ms cubic-bezier(0.45, 0, 0, 1);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+html.dark-theme .lockscreen-cover.unlocked {
+  -webkit-animation: lock-screen-out 800ms cubic-bezier(0.45, 0, 0, 1);
+          animation: lock-screen-out 800ms cubic-bezier(0.45, 0, 0, 1);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+html.light-theme {
+}
+
+@keyframes app-open {
+  0% {
+    -webkit-transform: scale3d(0.1, 0.1, 1) translate3d(50%, 50%, 0);
+            transform: scale3d(0.1, 0.1, 1) translate3d(50%, 50%, 0);
+  }
+  100% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes app-close {
+  0% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+  60% {
+    -webkit-transform: scale3d(0.2, 0.2, 1) translate3d(30%, 30%, 0);
+            transform: scale3d(0.2, 0.2, 1) translate3d(30%, 30%, 0);
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale3d(0.2, 0.2, 1) translate3d(30%, 30%, 0);
+            transform: scale3d(0.2, 0.2, 1) translate3d(30%, 30%, 0);
+  }
+}
+
+@keyframes history-app-open {
+  0% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+            transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+  100% {
+  }
+}
+
+@keyframes app-icon-open {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes app-icon-close {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes sub-view-in {
+  0% {
+    -webkit-transform: translate3d(40px, 0, 0);
+            transform: translate3d(40px, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes sub-view-out {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate3d(40px, 0, 0);
+            transform: translate3d(40px, 0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes background-cover {
+  0% {
+    background-color: transparent;
+  }
+  40% {
+    background-color: #000;
+  }
+  60% {
+    background-color: #000;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes history-open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes history-close {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes app-content-loaded {
+  0% {
+    -webkit-transform: translate3d(0, 30px, 0);
+            transform: translate3d(0, 30px, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes lock-screen-in {
+  0% {
+    z-index: 1000;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  100% {
+    z-index: 1000;
+    -webkit-box-shadow: inset 0 -120vh 30px #000;
+            box-shadow: inset 0 -120vh 30px #000;
+  }
+}
+
+@keyframes lock-screen-out {
+  0% {
+    z-index: 1000;
+    -webkit-box-shadow: inset 0 -120vh 30px #000;
+            box-shadow: inset 0 -120vh 30px #000;
+  }
+  100% {
+    z-index: 1000;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+html.light-theme .app {
+  display: block;
+  background: #f1f1f1;
+  width: 100%;
+  height: calc(100% - 25px);
+  margin: 25px 0 0 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+html.light-theme .app .view {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  padding: 50px 0 0 0;
+}
+
+html.light-theme .app .view.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html.light-theme .app .view .view-header {
+  height: 50px;
+  width: 100%;
+  background-color: #b9b9b9;
+  color: #1a1a1a;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  position: absolute;
+  top: 0;
+  z-index: 15;
+}
+
+html.light-theme .app .view .view-header .view-header-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  font-size: 1.3em;
+}
+
+html.light-theme .app .view .view-header .view-header-label p {
+  margin: auto;
+}
+
+html.light-theme .app .view .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 0 0 0;
+}
+
+html.light-theme .app .view .section .section-entry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #1a1a1a;
+  padding: 20px 0 20px 20px;
+  border-bottom: solid 2px #f1f1f1;
+}
+
+html.light-theme .app .view .section .section-entry .entry-icon {
+  width: 40px;
+  font-size: 1.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html.light-theme .app .view .section .section-entry:active {
+  background: #b9b9b9;
+}
+
+html.light-theme .app .sub-view {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  background-color: #f1f1f1;
+}
+
+html.light-theme .app .sub-view .view-header {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+html.light-theme .app .sub-view.opened {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: sub-view-in 300ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: sub-view-in 300ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+}
+
+html.light-theme .app .sub-view.closing {
+  -webkit-animation: sub-view-out 300ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: sub-view-out 300ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+}
+
+html.light-theme .app.opened {
+  position: absolute;
+  display: block;
+  -webkit-animation: app-open 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: app-open 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 14;
+}
+
+html.light-theme .app.closing {
+  position: absolute;
+  display: block;
+  -webkit-animation: app-close 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: app-close 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 14;
+}
+
+html.light-theme .app.history {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  z-index: 91;
+  opacity: 1;
+}
+
+html.light-theme .app.history-open {
+  -webkit-animation: history-app-open 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: history-app-open 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+html.light-theme .load-animation-page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #1e1e1e;
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+html.light-theme .load-animation-page .load-animation-container {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  position: absolute;
+  top: 20%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-animation: box-rotation-animation 5s ease-in-out infinite;
+          animation: box-rotation-animation 5s ease-in-out infinite;
+}
+
+html.light-theme .load-animation-page .load-animation-container .load-animation-circle {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  background-color: #1e1e1e;
+}
+
+html.light-theme .load-animation-page .load-animation-container .load-animation-box {
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: load-box-animation 5s ease-in-out infinite;
+          animation: load-box-animation 5s ease-in-out infinite;
+}
+
+html.light-theme .load-animation-page .load-animation-text {
+  position: absolute;
+  top: 50%;
+  margin: 100px auto 0 auto;
+  color: #fff;
+  width: 60%;
+  overflow: hidden;
+}
+
+html.light-theme .load-animation-page .load-animation-text-overlay {
+  position: absolute;
+  height: 20%;
+  top: 80%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00000000), to(#1e1e1e));
+  background: linear-gradient(#00000000, #1e1e1e);
+}
+
+html.light-theme .load-animation-page .load-animation-bar {
+  width: 60%;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  margin: 50px auto 0 auto;
+}
+
+html.light-theme .load-animation-page .load-animation-bar .load-animation-bar-filler {
+  width: 100%;
+  height: 100%;
+}
+
+html.light-theme .load-animation-page .load-animation-bar .load-animation-bar-filler #load-animation-filler {
+  font-size: 0.8em;
+  background-color: #fff;
+  width: 0%;
+  height: 100%;
+  -webkit-transition: all 100ms ease-out;
+  transition: all 100ms ease-out;
+  font-weight: 400;
+}
+
+html.light-theme .load-animation-page .load-animation-bar .load-animation-bar-filler #load-animation-filler p {
+  float: right;
+}
+
+html.light-theme .load-animation-page.loaded {
+  -webkit-transition: all 1s cubic-bezier(0.45, 0, 0, 1);
+  transition: all 1s cubic-bezier(0.45, 0, 0, 1);
+  top: -100%;
+}
+
+@keyframes load-box-animation {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+            transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+  12.5% {
+    -webkit-transform: translate3d(-25px, 0, 0) scale3d(2, 1, 1);
+            transform: translate3d(-25px, 0, 0) scale3d(2, 1, 1);
+  }
+  25% {
+    -webkit-transform: translate3d(-50px, 0, 0) scale3d(1, 1, 1);
+            transform: translate3d(-50px, 0, 0) scale3d(1, 1, 1);
+  }
+  37.5% {
+    -webkit-transform: translate3d(-50px, -25px, 0) scale3d(1, 2, 1);
+            transform: translate3d(-50px, -25px, 0) scale3d(1, 2, 1);
+  }
+  50% {
+    -webkit-transform: translate3d(-50px, -50px, 0) scale3d(1, 1, 1);
+            transform: translate3d(-50px, -50px, 0) scale3d(1, 1, 1);
+  }
+  62.5% {
+    -webkit-transform: translate3d(-25px, -50px, 0) scale3d(2, 1, 1);
+            transform: translate3d(-25px, -50px, 0) scale3d(2, 1, 1);
+  }
+  75% {
+    -webkit-transform: translate3d(0, -50px, 0) scale3d(1, 1, 1);
+            transform: translate3d(0, -50px, 0) scale3d(1, 1, 1);
+  }
+  87.5% {
+    -webkit-transform: translate3d(0, -25px, 0) scale3d(1, 2, 1);
+            transform: translate3d(0, -25px, 0) scale3d(1, 2, 1);
+  }
+  100% {
+  }
+}
+
+@keyframes box-rotation-animation {
+  0% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+html.light-theme #app-history-container {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b7;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  top: 25px;
+  left: 0;
+  z-index: 90;
+  padding: 40px 0 0 0;
+  overflow: scroll;
+}
+
+html.light-theme #app-history-container .app-history {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 200px 10% 300px 10%;
+}
+
+html.light-theme #app-history-container .app-history .app-history-entry-container {
+  height: calc(400px / 2);
+  width: 100%;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+html.light-theme #app-history-container .app-history .app-history-entry-container .app-history-entry {
+  height: 400px;
+  width: 100%;
+  margin: 2px 0;
+  -webkit-box-shadow: 0 0 20px #000;
+          box-shadow: 0 0 20px #000;
+  position: relative;
+  -webkit-transform: perspective(100em) rotateX(-10deg);
+          transform: perspective(100em) rotateX(-10deg);
+}
+
+html.light-theme #app-history-container .app-history .app-history-entry-container .app-history-entry .app-history-title {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f1f1f1;
+  z-index: 94;
+  color: #1a1a1a;
+}
+
+html.light-theme #app-history-container .app-history .app-history-entry-container .app-history-entry .history-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 92;
+}
+
+html.light-theme #app-history-container.open {
+  -webkit-animation: history-open 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: history-open 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  display: block;
+}
+
+html.light-theme #app-history-container.close {
+  -webkit-animation: history-close 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: history-close 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+}
+
+html.light-theme html, html.light-theme body, html.light-theme div, html.light-theme span, html.light-theme applet, html.light-theme object, html.light-theme iframe, html.light-theme h1, html.light-theme h2, html.light-theme h3, html.light-theme h4, html.light-theme h5, html.light-theme h6, html.light-theme p, html.light-theme blockquote, html.light-theme pre, html.light-theme a, html.light-theme abbr, html.light-theme acronym, html.light-theme address, html.light-theme big, html.light-theme cite, html.light-theme code, html.light-theme del, html.light-theme dfn, html.light-theme em, html.light-theme font, html.light-theme img, html.light-theme ins, html.light-theme kbd, html.light-theme q, html.light-theme s, html.light-theme samp, html.light-theme small, html.light-theme strike, html.light-theme strong, html.light-theme sub, html.light-theme sup, html.light-theme tt, html.light-theme var, html.light-theme b, html.light-theme u, html.light-theme center, html.light-theme dl, html.light-theme dt, html.light-theme dd, html.light-theme ol, html.light-theme ul, html.light-theme li, html.light-theme fieldset, html.light-theme form, html.light-theme label, html.light-theme legend, html.light-theme caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: "Open Sans", sans-serif, Helvetica;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+}
+
+html.light-theme body, html.light-theme #window, html.light-theme #main {
+  height: 100%;
+  width: 100%;
+}
+
+html.light-theme #window {
+  background: #000000;
+}
+
+html.light-theme #window #main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html.light-theme #window #main #status-bar {
+  height: 25px;
+  background-color: #000;
+  color: #e6e6e6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 100;
+}
+
+html.light-theme #window #main #status-bar .clock-digital {
+  text-align: center;
+  padding: 1px 5px 0 0;
+}
+
+html.light-theme #window #main #main-content-container {
+  height: 100%;
+  margin-top: 25px;
+  z-index: 10;
+}
+
+html.light-theme #window #main #main-content-container #home-screen {
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+html.light-theme #window #main #main-content-container #home-screen .app-grid {
+  width: 200%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px !important;
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
+  -ms-grid-rows: auto auto auto auto auto;
+      grid-template-rows: auto auto auto auto auto;
+}
+
+html.light-theme #window #main #main-content-container #home-screen .app-grid .app-entry {
+  color: #e6e6e6;
+  height: 60px;
+  overflow: visible;
+}
+
+html.light-theme #window #main #main-content-container #home-screen .app-grid .app-entry .app-icon {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+html.light-theme #window #main #main-content-container #home-screen .app-grid .app-entry .app-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+html.light-theme #window #main #main-content-container #home-screen .app-grid .app-entry .app-label {
+  text-align: center;
+  font-size: .9em;
+}
+
+html.light-theme #window #main #main-content-container #home-screen .app-grid .app-entry .app-label p {
+  text-shadow: 0 0 5px black;
+}
+
+html.light-theme #window #main #main-content-container #home-screen .app-grid .app-entry.opening {
+  -webkit-animation: app-icon-open 200ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: app-icon-open 200ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+html.light-theme #window #main #main-content-container #home-screen .app-grid .app-entry.closing {
+  -webkit-animation: app-icon-close 200ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+          animation: app-icon-close 200ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+html.light-theme #window #main #main-content-container #home-screen .app-grid-container {
+  -webkit-transition: -webkit-transform 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  transition: -webkit-transform 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  transition: transform 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+  transition: transform 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96), -webkit-transform 400ms cubic-bezier(0.43, 0.21, 0.38, 0.96);
+}
+
+html.light-theme #window #main #main-content-container #home-screen .app-grid-container.appOpen {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+html.light-theme #window #main #nav-bar {
+  height: 50px;
+  background-color: #0000008c;
+  color: #e6e6e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+html.light-theme #window #main #nav-bar .nav-item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+html.light-theme #window #main #nav-bar .nav-item:active i {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+html.light-theme #window #main #nav-bar .nav-item i {
+  -webkit-transition: all 100ms cubic-bezier(0.51, 0.01, 0.46, 0.96);
+  transition: all 100ms cubic-bezier(0.51, 0.01, 0.46, 0.96);
+  margin: auto;
+  font-size: 1.1em;
+}
+
+html.light-theme #window #main #nav-bar .nav-item i#nav-back {
+  font-size: 1.9em;
+}
+
+html.light-theme #app-container #settings-app #wallpaper-view .settings-wallpaper {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+html.light-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-container {
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: local;
+}
+
+html.light-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-container .wallpaper-transition-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+html.light-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-container.wallpaper-transition .wallpaper-transition-cover {
+  -webkit-animation: background-cover 1s ease-in-out;
+          animation: background-cover 1s ease-in-out;
+}
+
+html.light-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  z-index: 14;
+}
+
+html.light-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid .wallpaper-selector-spacer {
+  height: calc(100% - 80px * 3);
+  width: 100%;
+  background: transparent;
+}
+
+html.light-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid .wallpaper-selector-icon-up {
+  height: 20px;
+  width: 100%;
+}
+
+html.light-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid .wallpaper-selector-images {
+  height: auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #0000008e;
+  padding: 20px 10px 100% 10px;
+}
+
+html.light-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid .wallpaper-selector-images .wallpaper-selector-image {
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 100ms cubic-bezier(0.51, 0.01, 0.46, 0.96);
+  transition: all 100ms cubic-bezier(0.51, 0.01, 0.46, 0.96);
+}
+
+html.light-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid .wallpaper-selector-images .wallpaper-selector-image.selected {
+  border: solid 2px #1a1a1a;
+}
+
+html.light-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid .wallpaper-selector-images .wallpaper-selector-upload {
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: all 100ms cubic-bezier(0.51, 0.01, 0.46, 0.96);
+  transition: all 100ms cubic-bezier(0.51, 0.01, 0.46, 0.96);
+}
+
+html.light-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid .wallpaper-selector-images .wallpaper-selector-upload #wallpaper-uploader {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+}
+
+html.light-theme #app-container #settings-app #wallpaper-view .settings-wallpaper .wallpaper-selector-grid .wallpaper-selector-images .wallpaper-selector-upload i {
+  margin: auto;
+  font-size: 1.2em;
+}
+
+html.light-theme #app-container #settings-app #about-view .settings-about {
+  color: #1a1a1a;
+  display: block;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 80%;
+}
+
+html.light-theme #app-container #settings-app #about-view .settings-about h1 {
+  font-size: 2em;
+  margin: 10px 0 10px 10px;
+}
+
+html.light-theme #app-container #settings-app #about-view .settings-about h2 {
+  font-size: 1.5em;
+  margin: 10px 0 10px 10px;
+}
+
+html.light-theme #app-container #settings-app #about-view .settings-about p {
+  margin: 10px 0 10px 10px;
+}
+
+html.light-theme #app-container #settings-app #about-view .settings-about .secret {
+  margin-top: 1000px;
+}
+
+html.light-theme .lockscreen-cover {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+html.light-theme .lockscreen-cover.locked {
+  -webkit-animation: lock-screen-in 800ms cubic-bezier(0.45, 0, 0, 1);
+          animation: lock-screen-in 800ms cubic-bezier(0.45, 0, 0, 1);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+html.light-theme .lockscreen-cover.unlocked {
+  -webkit-animation: lock-screen-out 800ms cubic-bezier(0.45, 0, 0, 1);
+          animation: lock-screen-out 800ms cubic-bezier(0.45, 0, 0, 1);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+/*# sourceMappingURL=theme.css.map */

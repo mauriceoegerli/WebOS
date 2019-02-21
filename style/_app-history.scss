@@ -1,0 +1,68 @@
+#app-history-container{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b7;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    top: $status-bar-height;
+    left: 0;
+    z-index: 90;
+    padding: 40px 0 0 0; 
+    overflow: scroll;
+
+    .app-history{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        padding: 200px 10% 300px 10%;
+
+        .app-history-entry-container{
+            height: calc(#{$app-history-entry-height} / 2);
+            width: 100%;
+            margin: 0 auto;
+            overflow: visible;
+
+            .app-history-entry{
+                height: $app-history-entry-height;
+                width: 100%;
+                margin: 2px 0;
+                box-shadow: $app-history-box-shadow;
+                position: relative;
+                transform: perspective(100em) rotateX(-10deg);
+
+                .app-history-title{
+                    height: $app-header-height;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: $system-primary-color;
+                    z-index: 94;
+                    color: $system-font-color;
+                }
+
+                .history-cover{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 92;
+                }
+            }
+        }
+        
+    }
+
+    &.open{
+        animation: history-open $app-open-animation-properties;
+        display: block;
+    }
+
+    &.close{
+        animation: history-close $app-open-animation-properties;
+    }
+}

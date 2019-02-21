@@ -1,0 +1,72 @@
+<div id="settings-app" class="app settings-app">
+    <div id="main-view" class="view">
+        <div class="view-header">
+            <div class="view-header-label">
+                <p>Einstellungen</p>
+            </div>
+        </div>
+        <div class="settings-general section">
+            <div id="wallpaper" class="section-entry">
+                <div class="entry-icon">
+                    <i class="fas fa-image"></i>
+                </div>
+                <div class="entry-label">
+                    <p>Hintergrund</p>
+                </div>
+            </div>
+            <div class="section-entry">
+                <div class="entry-icon">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <div class="entry-label">
+                    <p>Töne</p>
+                </div>
+            </div>
+            <div id="about" class="section-entry">
+                <div class="entry-icon">
+                    <i class="fas fa-info"></i>
+                </div>
+                <div class="entry-label">
+                    <p>Über</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wallpaper-view" class="view sub-view">
+        <div class="view-header">
+            <div class="view-header-label">
+                <p>Hintergrund</p>
+            </div>
+        </div>
+        <div class="settings-wallpaper section">
+            <div class="wallpaper-container">
+                <div class="wallpaper-transition-cover"></div>
+            </div>
+            <div class="wallpaper-selector-grid" id="custom-scroll-container">
+                <div class="wallpaper-selector-spacer"></div>
+                <div class="wallpaper-selector-icon-up">
+                </div>
+                <div class="wallpaper-selector-images">
+                    <div class="wallpaper-selector-upload">
+                        <input id="wallpaper-uploader" type="file" accept="image/*">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about-view" class="view sub-view">
+        <div class="view-header">
+            <div class="view-header-label">
+                <p>Über</p>
+            </div>
+        </div>
+        <div class="settings-about section">
+            <h1>A Web-Based mobile interface</h1>
+            <p>Made with HTML, Javascript, Jquery and Scss</p>
+            <p>By Maurice Oegerli</p>
+            <p class="secret">:D</p>
+        </div>
+    </div>
+</div>
+<script src="apps/settings/settings.js"></script>

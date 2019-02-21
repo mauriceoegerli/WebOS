@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import 'variables';
+@import 'animations';
+@import 'app';
+@import 'loading';
+@import 'app-history';
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: $main-font;
+    user-select: none;
+    overflow: hidden; 
+}
+
+body, #window, #main{
+    height: 100%;
+    width: 100%;
+}
+
+#window{
+    background: $system-background;
+
+    #main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        #status-bar{
+            height: $status-bar-height;
+            background-color: $status-bar-color;
+            color: $status-bar-font-color;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            z-index: 100;
+
+            .clock-digital{
+                text-align: center;
+                padding: 1px 5px 0 0;
+            }
+        }
+
+        #main-content-container{
+            height: 100%;
+            margin-top: $status-bar-height;
+            z-index: 10;
+
+            #home-screen{
+                background-attachment: fixed;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 100%;
+
+                .app-grid{
+                    width: 200%;
+                    height: 100%;
+                    box-sizing: border-box;
+                    padding: 10px !important;
+                    display: grid !important;
+                    grid-template-columns: 25% 25% 25% 25%;
+                    grid-template-rows: auto auto auto auto auto;
+
+                    .app-entry{
+                        color: $home-app-label-color;
+                        height: $home-app-height;
+                        overflow: visible;
+
+                        .app-icon{
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: space-around;
+
+                            img{
+                                width: 50px;
+                                height: 50px;
+                            }
+                        }
+
+                        .app-label{
+                            text-align: center;
+                            font-size: .9em;
+
+                            p{
+                                text-shadow: $app-icon-shadow;
+                            }
+                        }
+
+                        &.opening{
+                            animation: app-icon-open $app-icon-animation-properties;
+                            animation-fill-mode: forwards;
+                        }
+
+                        &.closing{
+                            animation: app-icon-close $app-icon-animation-properties;
+                            animation-fill-mode: forwards;
+                        }
+                    }
+                }
+
+                .app-grid-container{
+                    transition: transform $app-open-animation-properties;
+
+                    &.appOpen{
+                        transform: scale(0.95);
+                    }
+                }
+            }
+        }
+
+        #nav-bar{
+            height: $nav-bar-height;
+            background-color: $nav-bar-color;
+            color: $nav-icons-color;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+
+            .nav-item{
+                flex-grow: 1;
+                display: flex;
+                justify-content: space-evenly;
+
+                &:active{
+                    i{
+                        transform: scale(1.5);
+                    }
+                }
+
+                i{
+                    transition: all $default-transition-properties;
+                    margin: auto;
+                    font-size: 1.1em;
+
+                    &#nav-back{
+                        font-size: 1.9em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#app-container{
+    #settings-app{
+        @import 'settings-app';
+    }
+}
+
+.lockscreen-cover{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    &.locked{
+        animation: lock-screen-in $lockscreen-animation-properties;
+        animation-fill-mode: forwards;
+    }
+
+    &.unlocked{
+        animation: lock-screen-out $lockscreen-animation-properties;
+        animation-fill-mode: forwards;
+    }
+}
